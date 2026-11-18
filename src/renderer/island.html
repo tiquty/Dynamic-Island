@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Island</title>
+  <link rel="stylesheet" href="shared/tokens.css">
+  <link rel="stylesheet" href="island.css">
+</head>
+<body>
+  <div id="island">
+    <div class="mini">
+      <div class="cover sm" id="miniCover"><span class="ph" data-i="note"></span></div>
+      <div class="bars" id="bars"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="full">
+      <div class="top">
+        <div class="cover lg" id="cover"><span class="ph" data-i="note"></span></div>
+        <div class="meta">
+          <div class="eyebrow" id="src"></div>
+          <div class="title" id="title">Ничего не играет</div>
+          <div class="artist" id="artist">Выберите плейлист в настройках</div>
+        </div>
+        <div class="corner">
+          <button class="ghost" id="btnSettings" title="Настройки" data-i="sliders"></button>
+          <button class="ghost" id="btnCollapse" title="Свернуть" data-i="up"></button>
+        </div>
+      </div>
+
+      <div class="progress">
+        <span id="tCur">0:00</span>
+        <div class="bar" id="bar"><div class="fill" id="fill"></div></div>
+        <span id="tDur">0:00</span>
+      </div>
+
+      <div class="controls">
+        <button class="ic shuffle" id="btnShuffle" title="Вперемешку" data-i="shuffle"></button>
+        <div class="center">
+          <button class="ic" id="btnPrev" title="Назад" data-i="prev"></button>
+          <button class="play" id="btnPlay" title="Пауза / Играть" data-i="play"></button>
+          <button class="ic" id="btnNext" title="Вперёд" data-i="next"></button>
+        </div>
+        <div class="vol" id="vol">
+          <button class="ic sm" id="btnVol" title="Громкость" data-i="volume"></button>
+          <input type="range" id="volRange" min="0" max="100" aria-label="Громкость">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="shared/icons.js"></script>
+  <script src="shared/color.js"></script>
+  <script src="island.js"></script>
+</body>
+</html>

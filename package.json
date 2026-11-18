@@ -1,0 +1,40 @@
+{
+  "name": "island-player",
+  "version": "1.2.0",
+  "description": "Динамический островок с музыкой для Windows: Яндекс Музыка, ВКонтакте, Spotify",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "dependencies": {
+    "hls.js": "^1.5.17"
+  },
+  "devDependencies": {
+    "electron": "https://github.com/castlabs/electron-releases#v42.11.0+wvcus",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.island.player",
+    "productName": "Island Player",
+    "electronVersion": "42.11.0",
+    "electronDist": "node_modules/electron/dist",
+    "files": ["src/**/*", "assets/**/*"],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Island Player",
+      "language": "1049",
+      "include": "build/installer.nsh",
+      "artifactName": "Island-Player-Setup.${ext}",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

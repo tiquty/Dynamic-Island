@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Island Player</title>
+  <link rel="stylesheet" href="shared/tokens.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div id="app">
+    <header class="titlebar">
+      <div class="brand"><span class="logo"></span>Island Player</div>
+      <div class="win">
+        <button id="btnIsland" title="Свернуть в островок" data-i="island"></button>
+        <button id="btnTray" title="Скрыть в трей" data-i="close"></button>
+      </div>
+    </header>
+
+    <main id="view"></main>
+
+    <div class="errbar" id="errbar" hidden></div>
+    <div class="miniplayer" id="mp" hidden>
+      <div class="mp-prog"><div id="mpFill"></div></div>
+      <div class="mp-cover" id="mpCover"></div>
+      <div class="mp-meta"><div class="mp-title" id="mpTitle"></div><div class="mp-artist" id="mpArtist"></div></div>
+      <div class="mp-ctl">
+        <div class="mp-vol" id="mpVolBox">
+          <button id="mpVol" title="Громкость" data-i="volume"></button>
+          <div class="pop"><div class="pop-in"><input type="range" id="mpVolRange" min="0" max="100" aria-label="Громкость"></div></div>
+        </div>
+        <button id="mpShuffle" title="Вперемешку" data-i="shuffle"></button>
+        <button id="mpPrev" title="Назад" data-i="prev"></button>
+        <button id="mpPlay" class="mp-play" title="Пауза / Играть"></button>
+        <button id="mpNext" title="Вперёд" data-i="next"></button>
+      </div>
+    </div>
+
+    <nav class="tabs">
+      <button data-tab="account"><span class="ic" data-i="user"></span>Аккаунт</button>
+      <button data-tab="playlists"><span class="ic" data-i="list"></span>Плейлисты</button>
+      <button data-tab="settings"><span class="ic" data-i="sliders"></span>Настройки</button>
+    </nav>
+  </div>
+
+  <script src="shared/icons.js"></script>
+  <script src="shared/color.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
