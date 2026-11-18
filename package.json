@@ -5,7 +5,7 @@
   "main": "src/main/main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win nsis"
+    "dist": "electron-builder --win nsis --publish never"
   },
   "dependencies": {
     "hls.js": "^1.5.17"
@@ -19,7 +19,10 @@
     "productName": "Island Player",
     "electronVersion": "42.11.0",
     "electronDist": "node_modules/electron/dist",
-    "files": ["src/**/*", "assets/**/*"],
+    "files": [
+      "src/**/*",
+      "assets/**/*"
+    ],
     "win": {
       "target": "nsis",
       "icon": "assets/icon.png"
@@ -36,5 +39,6 @@
       "artifactName": "Island-Player-Setup.${ext}",
       "deleteAppDataOnUninstall": false
     }
-  }
+  },
+  "author": "Island Player"
 }
